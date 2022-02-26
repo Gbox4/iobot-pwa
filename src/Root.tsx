@@ -13,7 +13,7 @@ export default function Root() {
             <Route path="/" element={<App />} />
             <Route path="calendar" element={<Calendar />} />
             <Route path="date">
-            <Route path=":date" element={<Detail />} />
+                <Route path=":date" element={<Detail />} />
             </Route>
             <Route path="settings" element={<Settings />} />
             <Route path="*" element={<h1>404 not found</h1>} />

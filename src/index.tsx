@@ -1,5 +1,6 @@
 import { render } from "react-dom";
 import Root from "./Root";
+import "./index.css"
 
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
