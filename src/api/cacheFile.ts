@@ -205,16 +205,6 @@ export async function saveSettingsData(settings: SettingsInterface) {
 
 // types for defining how themes are written
 export type ThemeStrInterface = "blue" | "light" | "dark"
-export type ThemeInterface = {
-    text: {color: string},
-    secondarytext: {color: string},
-    container: any,
-    body: {backgroundColor: string},
-    button: {backgroundColor: string},
-    donetext: {color: string},
-    upcomingtext: {color: string},
-    currenttext: {color: string},
-}
 
 // type for defining how settings should be passed to components
 export interface SettingsInterface {
