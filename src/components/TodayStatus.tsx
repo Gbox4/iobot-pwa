@@ -8,43 +8,43 @@ export default function TodayStatus(props: TodayComponentProps) {
     if (timeData.status === 0) {
         return (
           <div>
-            <p className="text-xl">School has not started</p>
+            <p className="text-lg">School has not started</p>
           </div>
         )
     }
     else if (timeData.status === 1) {
         return(
           <div>
-              <p className="text-xl">Today is {timeData.dateStr}</p>
-              <p className="text-xl">{timeData.letter}</p>
+              <p className="text-lg">Today is {timeData.dateStr}</p>
+              <p className="text-lg">{timeData.letter}</p>
               <p className="text-4xl">{timeData.timeLeft}</p>
-              <p className="text-xl">Left in {timeData.periodName}</p>
+              <p className="text-lg">Left in {timeData.periodName}</p>
           </div>
         )
     }
     else if (timeData.status === 2) {
         return(
           <div>
-            <p className="text-xl">Today is {timeData.dateStr}</p>
-            <p className="text-xl">{timeData.letter}</p>
+            <p className="text-lg">Today is {timeData.dateStr}</p>
+            <p className="text-lg">{timeData.letter}</p>
             <p className="text-4xl">{timeData.timeLeft}</p>
-            <p className="text-xl">Until {timeData.periodName}</p>
+            <p className="text-lg">Until {timeData.periodName}</p>
           </div>
         )
     }
     else if (timeData.status === 3) {
         return (
           <div>
-            <p className="text-xl">Today is {timeData.dateStr}</p>
-            <p className="text-xl">Classes are over</p>
+            <p className="text-lg">Today is {timeData.dateStr}</p>
+            <p className="text-lg">Classes are over</p>
           </div>
         )
     }
     else { // therefore timestatus=4
         return (
           <div>
-            <p className="text-xl">Today is {timeData.dateStr}</p>
-            <p className="text-xl">No data for today</p>
+            <p className="text-lg">Today is {timeData.dateStr}</p>
+            <p className="text-lg">No data for today</p>
           </div>
         )
     }
