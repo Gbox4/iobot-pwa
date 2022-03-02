@@ -59,7 +59,7 @@ export default function Root() {
         :
         <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Today theme={theme} calendarData={calendar} timeData={timeData} />} />
+            <Route path="/" element={<Today theme={theme} timeData={timeData} />} />
             <Route path="calendar" element={<Calendar theme={theme} calendarData={calendar} />} />
             <Route path="date">
                 <Route path=":date" element={<Detail />} />

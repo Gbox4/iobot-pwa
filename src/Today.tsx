@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
+import { calendarItemInterface } from "./api/cacheFile";
 import { TimeDataInterface } from "./api/CalculateTime";
 import { ScreenProps, ThemeInterface } from "./api/globals";
 import Button from "./components/Button";
+import TodaySchedule from "./components/TodaySchedule";
 import TodayStatus from "./components/TodayStatus";
 
-export interface TodayComponentProps {timeData: TimeDataInterface,  theme: ThemeInterface}
+export interface TodayComponentProps {
+  theme: ThemeInterface,
+  timeData?: TimeDataInterface,
+  todayCalendar?: calendarItemInterface,
+}
 
 export default function Today(props: ScreenProps) {
   return (
@@ -14,8 +20,8 @@ export default function Today(props: ScreenProps) {
           <TodayStatus theme={props.theme} timeData={props.timeData!}/>
         </div>
         
-        <div className={`flex flex-col justify-between w-full rounded-3xl p-8 h-1/2 mb-6`} style={props.theme.container}>
-          
+        <div className={`w-full rounded-3xl p-8 h-1/2 mb-6`} style={props.theme.container}>
+          <TodaySchedule theme={props.theme} timeData={props.timeData!}/>
         </div>
 
         <div className="flex flex-row w-full justify-between">

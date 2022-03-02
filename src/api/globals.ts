@@ -79,6 +79,7 @@ export interface ComponentProps {
 
 export interface ScreenProps {
     theme: ThemeInterface;
+    todayCalendar?: calendarItemInterface;
     timeData?: TimeDataInterface;
     settings?: SettingsInterface;
     refreshApp?: Function;
