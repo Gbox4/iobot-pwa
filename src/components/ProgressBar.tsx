@@ -16,7 +16,7 @@ export default function ProgressBar() {
     useEffect(() => {
         const incrementer = setTimeout(() => {
             if (progress <= 95){
-                setProgress((progress+(Math.random())/2))
+                setProgress((progress+(Math.random())/4))
             }
             else if (progress < 100) {
                 setProgress((progress+(Math.random())/10))
