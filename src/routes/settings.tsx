@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
-import { ScreenProps } from "../api/globals";
-import { deleteCalendarData, saveSettingsData, ThemeStrInterface } from "../api/cacheFile";
+import { getTheme, ScreenProps, ThemeInterface, ThemeStrInterface } from "../api/globals";
+import { deleteCalendarData, saveSettingsData } from "../api/cacheFile";
 import Button from "../components/Button";
 import Divider from "../components/Divider";
 
@@ -22,7 +22,7 @@ export default function Settings(props: ScreenProps) {
     }
 
     const setTheme = (theme: ThemeStrInterface) => {
-      props.setTheme!(theme)
+      props.setTheme!(getTheme(theme))
       let newSettings = props.settings!
       newSettings.theme = theme
       saveSettingsData(newSettings)
@@ -30,7 +30,7 @@ export default function Settings(props: ScreenProps) {
 
 
   return (
-    <div className="h-screen text-left" style={}>
+    <div className="h-screen text-left" style={props.theme.body}>
       <div className="flex flex-col justify-center items-center h-screen max-w-lg mx-auto w-11/12">
 
 

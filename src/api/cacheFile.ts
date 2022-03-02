@@ -1,3 +1,5 @@
+import { ThemeStrInterface } from "./globals";
+
 const calendarUrl = "https://fast-bayou-92107.herokuapp.com/https://calendar.google.com/calendar/ical/iolani.org_ds7482aj4fh4uortauf8vuquso%40group.calendar.google.com/public/basic.ics"
 
 export interface scheduleItemInterface {
@@ -202,9 +204,6 @@ export async function saveSettingsData(settings: SettingsInterface) {
   localStorage.removeItem('settings')
   localStorage.setItem('settings', JSON.stringify(settings))
 }
-
-// types for defining how themes are written
-export type ThemeStrInterface = "blue" | "light" | "dark"
 
 // type for defining how settings should be passed to components
 export interface SettingsInterface {
