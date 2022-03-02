@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { getTheme, ScreenProps, ThemeInterface, ThemeStrInterface } from "../api/globals";
-import { deleteCalendarData, saveSettingsData } from "../api/cacheFile";
+import { deleteCalendarData, deleteSettingsData, saveSettingsData } from "../api/cacheFile";
 import Button from "../components/Button";
 import Divider from "../components/Divider";
 
@@ -28,6 +28,12 @@ export default function Settings(props: ScreenProps) {
       saveSettingsData(newSettings)
     }
 
+    const resetSettings = () => {
+      deleteSettingsData()
+      //@ts-ignore
+      props.refreshApp()
+    }
+
 
   return (
     <div className="h-screen text-left" style={props.theme.body}>
@@ -53,7 +59,7 @@ export default function Settings(props: ScreenProps) {
         <Divider theme={props.theme} margin="16px 0"/>
 
         <div className="flex flex-row w-full justify-between text-center">
-          <Button theme={props.theme}><p>Reset settings</p></Button>
+          <Button theme={props.theme} onClick={resetSettings}><p>Reset settings</p></Button>
         </div>
 
         <Divider theme={props.theme} margin="16px 0"/>
