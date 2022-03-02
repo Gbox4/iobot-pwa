@@ -26,7 +26,6 @@ export default function Calendar(props: ScreenProps) {
     // Iterate through the calendar list, convert each one into an element and push it to the listDays
     props.calendarData!.forEach((x, i) => {
         listDays.push(
-            // @ts-ignore
             <Link key={i*2} to={`/date/${x.dateStr}`}>
                 <div className="flex flex-row items-center justify-between">
                     <div className="flex flex-col justify-between" style={getRowStyle(x, props.theme)}>

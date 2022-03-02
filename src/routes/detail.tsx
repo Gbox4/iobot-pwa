@@ -43,7 +43,7 @@ export default function Detail(props: ScreenProps) {
             })}
           </div>
           
-          <div className={`w-full rounded-3xl p-8 h-1/2 mb-6`} style={props.theme.container}>
+          <div className={`overflow-y-scroll w-full rounded-3xl p-8 h-1/2 mb-6`} style={props.theme.container}>
             <div className="h-full flex flex-col justify-between">
               <div />
               {listPeriods.slice(0,-1)}
