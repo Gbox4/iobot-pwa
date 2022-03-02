@@ -41,7 +41,7 @@ export default function TodaySchedule(props: TodayComponentProps) {
                         <p className="text-base" style={getRowStyle(x, props.theme)}>{x.timeStart.toTimeString().slice(0,5)} - {x.timeEnd.toTimeString().slice(0,5)}</p>
                     </div>
                 )
-                listPeriods.push(<Divider theme={props.theme} key={2*i+1}/>)
+                listPeriods.push(<Divider theme={props.theme} margin="2px 0" key={2*i+1}/>)
             })
         }
         else {
