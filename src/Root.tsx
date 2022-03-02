@@ -62,7 +62,7 @@ export default function Root() {
             <Route path="/" element={<Today theme={theme} timeData={timeData} />} />
             <Route path="calendar" element={<Calendar theme={theme} calendarData={calendar} />} />
             <Route path="date">
-                <Route path=":date" element={<Detail />} />
+                <Route path=":date" element={<Detail theme={theme} calendarData={calendar} />} />
             </Route>
             <Route path="settings" element={<Settings theme={theme} settings={settings} setTheme={setTheme} refreshApp={refreshApp} />} />
             <Route path="*" element={<h1>404 not found</h1>} />

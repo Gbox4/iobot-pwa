@@ -19,7 +19,7 @@ export type ThemeInterface = {
 export const getTheme = (theme: ThemeStrInterface) => {
     // const in case a theme wants to use shadows
     const shadows = {
-        boxShadow: "2px 2px 8px 0px rgba(0,0,0,0.6)"
+        boxShadow: "2px 2px 8px 0px rgba(0,0,0,0.3)"
     }
 
     const blueTheme: ThemeInterface = {

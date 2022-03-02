@@ -37,8 +37,8 @@ export default function TodaySchedule(props: TodayComponentProps) {
             timeData.fullSchedule.forEach((x, i) => {
                 listPeriods.push(
                     <div key={2*i} className="flex flex-row justify-between">
-                        <p className="text-xl" style={getRowStyle(x, props.theme)}>{x.periodName}</p>
-                        <p className="text-xl" style={getRowStyle(x, props.theme)}>{x.timeStart.toTimeString().slice(0,5)} - {x.timeEnd.toTimeString().slice(0,5)}</p>
+                        <p className="text-base" style={getRowStyle(x, props.theme)}>{x.periodName}</p>
+                        <p className="text-base" style={getRowStyle(x, props.theme)}>{x.timeStart.toTimeString().slice(0,5)} - {x.timeEnd.toTimeString().slice(0,5)}</p>
                     </div>
                 )
                 listPeriods.push(<Divider theme={props.theme} key={2*i+1}/>)

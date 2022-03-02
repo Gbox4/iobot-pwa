@@ -24,12 +24,12 @@ export default function Calendar(props: ScreenProps) {
     // Initalize empty array to hold the calendar days
     const listDays: JSX.Element[] = []
     // Iterate through the calendar list, convert each one into an element and push it to the listDays
-    props. calendarData!.forEach((x, i) => {
+    props.calendarData!.forEach((x, i) => {
         listDays.push(
             // @ts-ignore
             <Link key={i*2} to={`/date/${x.dateStr}`}>
                 <div className="flex flex-row items-center justify-between">
-                    <div className="flex flex-col justify-between">
+                    <div className="flex flex-col justify-between" style={getRowStyle(x, props.theme)}>
                         <p>{x.dateStr}</p>
                         <p>{x.dayEvents.find(x => x.includes('Schedule')) ?? "No data"}</p>
                     </div>
