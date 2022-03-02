@@ -61,6 +61,11 @@ export default function Settings(props: ScreenProps) {
         <div className="flex flex-row w-full justify-between text-center">
           <Button theme={props.theme}><Link to="/"><p>Back</p></Link></Button>
         </div>
+
+        <div style={{marginTop: 16}}/>
+
+        <p className="text-sm" style={props.theme.secondarytext}>Created by Gabe Banks</p>
+
       </div>
     </div>
   );
