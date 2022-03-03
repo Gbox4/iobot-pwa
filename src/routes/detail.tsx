@@ -21,7 +21,7 @@ export default function Detail(props: ScreenProps) {
                   <p className="text-base">{x.timeStart.toTimeString().slice(0,5)} - {x.timeEnd.toTimeString().slice(0,5)}</p>
               </div>
           )
-          listPeriods.push(<Divider theme={props.theme} key={2*i+1}/>)
+          listPeriods.push(<Divider theme={props.theme} margin="2px 0" key={2*i+1}/>)
       })
     }
     else {
