@@ -70,7 +70,7 @@ export default function Settings(props: ScreenProps) {
 
         <div style={{marginTop: 16}}/>
 
-        <p className="text-sm" style={props.theme.secondarytext}>Created by Gabe Banks</p>
+        <p className="text-sm" style={props.theme.secondarytext}>Created by <a target="_blank" rel="noopener noreferrer" href="https://gabebanks.net">Gabe Banks</a> 2022</p>
 
       </div>
     </div>
