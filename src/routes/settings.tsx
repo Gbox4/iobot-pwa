@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { getTheme, ScreenProps, ThemeInterface, ThemeStrInterface } from "../api/globals";
+import { getTheme, ScreenProps, ThemeStrInterface } from "../api/globals";
 import { deleteCalendarData, deleteSettingsData, saveSettingsData } from "../api/cacheFile";
 import Button from "../components/Button";
 import Divider from "../components/Divider";
