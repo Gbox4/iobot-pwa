@@ -50,6 +50,10 @@ export default function Root() {
                 return now.getTime() - x.dateObj.getTime() > 0 && now.getTime() - x.dateObj.getTime() < ONE_DAY
             })
             setTimeData(getCurrentTimeData(todayCalendar))
+
+            if (settings.theme === "awful") {
+                setTheme(getTheme("awful"))
+            }
         }
     }, 1000)
 

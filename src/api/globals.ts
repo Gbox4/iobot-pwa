@@ -3,7 +3,7 @@ import { calendarItemInterface, SettingsInterface } from "./cacheFile";
 import { TimeDataInterface } from "./CalculateTime";
 
 // types for defining how themes are written
-export type ThemeStrInterface = "blue" | "light" | "dark"
+export type ThemeStrInterface = string
 export type ThemeInterface = {
     text: any,
     secondarytext: any,
@@ -13,6 +13,10 @@ export type ThemeInterface = {
     donetext: any,
     upcomingtext: any,
     currenttext: any,
+}
+
+const randomColor = () => {
+    return "#" + Math.floor(Math.random()*16777215).toString(16)
 }
 
 // global function for getting the color of a component depending on the theme
@@ -61,9 +65,45 @@ export const getTheme = (theme: ThemeStrInterface) => {
         currenttext: { color: "rgba(61,197,66,1)" },
     }
 
+    const plumeriaTheme: ThemeInterface = {
+        text: { color: "#ffffff" },
+        secondarytext: { color: "#5a5a5a" },
+        container: { backgroundColor: "rgba(0,0,0,0.3)", ...shadows },
+        body: { background: "linear-gradient(150deg, rgba(238,192,146,1) 0%, rgba(140,76,197,1) 100%)", color: "#ffffff" },
+        button: { background: "linear-gradient(150deg, rgba(235,146,107,1) 0%, rgba(179,49,95,1) 100%)", ...shadows },
+        donetext: { color: "#a6a6a6" },
+        upcomingtext: { color: "#ffffff" },
+        currenttext: { color: "rgba(61,197,66,1)" },
+    }
+
+    const aquaTheme: ThemeInterface = {
+        text: { color: "#ffffff" },
+        secondarytext: { color: "#5a5a5a" },
+        container: { backgroundColor: "rgba(0,0,0,0.3)", ...shadows },
+        body: { background: "linear-gradient(150deg, rgba(135,201,192,1) 0%, rgba(39,64,100,1) 100%)", color: "#ffffff" },
+        button: { background: "linear-gradient(150deg, rgba(67,141,164,1) 0%, rgba(36,88,164,1) 100%)", ...shadows },
+        donetext: { color: "#a6a6a6" },
+        upcomingtext: { color: "#ffffff" },
+        currenttext: { color: "rgba(61,197,66,1)" },
+    }
+
+    const awfulTheme: ThemeInterface = {
+        text: { color: randomColor() },
+        secondarytext: { color: randomColor() },
+        container: { backgroundColor: randomColor() },
+        body: { background:  randomColor(), color:  randomColor() },
+        button: { background:  randomColor() },
+        donetext: { color:  randomColor() },
+        upcomingtext: { color:  randomColor() },
+        currenttext: { color:  randomColor() },
+    }
+
     if (theme === "blue") { return blueTheme }
     else if (theme === "dark") { return darkTheme }
     else if (theme === "light") { return lightTheme }
+    else if (theme === "plumeria") { return plumeriaTheme }
+    else if (theme === "aqua") { return aquaTheme }
+    else if (theme === "awful") { return awfulTheme }
     // If for some reason a different string is passed in (should never happen), then return dark theme as a fallback
     else { return darkTheme }
 }

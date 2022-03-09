@@ -40,12 +40,20 @@ export default function Settings(props: ScreenProps) {
       <div className="flex flex-col justify-center items-center h-screen max-w-lg mx-auto w-11/12">
 
 
-        <div className="flex flex-row w-full justify-between text-center">
+        <div className="flex flex-row w-full justify-between text-center mb-4">
           <Button theme={props.theme} onClick={() => {setTheme("dark")}}><p>Dark</p></Button>
           <div className="w-12" />
           <Button theme={props.theme} onClick={() => {setTheme("light")}}><p>Light</p></Button>
           <div className="w-12" />
           <Button theme={props.theme} onClick={() => {setTheme("blue")}}><p>Blue</p></Button>
+        </div>
+
+        <div className="flex flex-row w-full justify-between text-center">
+          <Button theme={props.theme} onClick={() => {setTheme("plumeria")}}><p>Plumeria</p></Button>
+          <div className="w-12" />
+          <Button theme={props.theme} onClick={() => {setTheme("aqua")}}><p>Aqua</p></Button>
+          <div className="w-12" />
+          <Button theme={props.theme} onClick={() => {setTheme("awful")}}><p>Awful</p></Button>
         </div>
 
         <Divider theme={props.theme} margin="16px 0"/>
