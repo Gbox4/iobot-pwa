@@ -49,7 +49,7 @@ export const getTheme = (theme: ThemeStrInterface) => {
         secondarytext: { color: "#5a5a5a" },
         container: { backgroundColor: "#ffffff", ...shadows },
         body: { backgroundColor: "#f7f7f7", color: "#000000" },
-        button: { backgroundColor: "#77c0ff", ...shadows },
+        button: { backgroundColor: "rgba(184,222,255,1)", ...shadows },
         donetext: { color: "#a6a6a6" },
         upcomingtext: { color: "#000000" },
         currenttext: { color: "rgba(61,197,66,1)" },
