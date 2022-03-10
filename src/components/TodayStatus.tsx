@@ -15,36 +15,36 @@ export default function TodayStatus(props: TodayComponentProps) {
     else if (timeData.status === 1) {
         return(
           <div>
-              <p className="text-lg">Today is {timeData.dateStr}</p>
-              <p className="text-lg">{timeData.letter}</p>
+              <p className="text-base sm:text-lg">Today is {timeData.dateStr}</p>
+              <p className="text-base sm:text-lg">{timeData.letter}</p>
               <p className="text-4xl">{timeData.timeLeft}</p>
-              <p className="text-lg">Left in {timeData.periodName}</p>
+              <p className="text-base sm:text-lg">Left in {timeData.periodName}</p>
           </div>
         )
     }
     else if (timeData.status === 2) {
         return(
           <div>
-            <p className="text-lg">Today is {timeData.dateStr}</p>
-            <p className="text-lg">{timeData.letter}</p>
+            <p className="text-base sm:text-lg">Today is {timeData.dateStr}</p>
+            <p className="text-base sm:text-lg">{timeData.letter}</p>
             <p className="text-4xl">{timeData.timeLeft}</p>
-            <p className="text-lg">Until {timeData.periodName}</p>
+            <p className="text-base sm:text-lg">Until {timeData.periodName}</p>
           </div>
         )
     }
     else if (timeData.status === 3) {
         return (
           <div>
-            <p className="text-lg">Today is {timeData.dateStr}</p>
-            <p className="text-lg">Classes are over</p>
+            <p className="text-base sm:text-lg">Today is {timeData.dateStr}</p>
+            <p className="text-base sm:text-lg">Classes are over</p>
           </div>
         )
     }
     else { // therefore timestatus=4
         return (
           <div>
-            <p className="text-lg">Today is {timeData.dateStr}</p>
-            <p className="text-lg">No data for today</p>
+            <p className="text-base sm:text-lg">Today is {timeData.dateStr}</p>
+            <p className="text-base sm:text-lg">No data for today</p>
           </div>
         )
     }

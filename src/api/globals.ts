@@ -79,10 +79,10 @@ export const getTheme = (theme: ThemeStrInterface) => {
 
     const lavenderTheme: ThemeInterface = {
         text: { color: "#ffffff" },
-        secondarytext: { color: "#cccccc" },
-        container: { backgroundColor: "#B392AC" },
-        body: { background:  "#735D78", color: "#ffffff" },
-        button: { background:  "#D1B3C4" },
+        secondarytext: { color: "#5a5a5a" },
+        container: { backgroundColor: "#93688a", ...shadows },
+        body: { background:  "#D1B3C4", color: "#ffffff" },
+        button: { background:  "#8b437c", ...shadows },
         donetext: { color: "#dddddd" },
         upcomingtext: { color: "#ffffff" },
         currenttext: { color: "rgba(76,232,81,1)" },
