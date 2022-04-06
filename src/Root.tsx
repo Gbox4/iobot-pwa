@@ -10,6 +10,7 @@ import { calendarItemInterface, getFileData, SettingsInterface } from "./api/cac
 import Loading from "./components/Loading";
 import { getTheme } from "./api/globals";
 import getCurrentTimeData, { TimeDataInterface } from "./api/CalculateTime";
+import Credits from "./routes/credits";
 
 const ONE_DAY = 1000 * 60 * 60 * 24
 
@@ -65,6 +66,7 @@ export default function Root() {
                 <Route path=":date" element={<Detail theme={theme} calendarData={calendar} />} />
             </Route>
             <Route path="settings" element={<Settings theme={theme} settings={settings} setTheme={setTheme} refreshApp={refreshApp} />} />
+            <Route path="credits" element={<Credits theme={theme}/>} />
             <Route path="*" element={<h1>404 not found</h1>} />
         </Routes>
         </BrowserRouter>

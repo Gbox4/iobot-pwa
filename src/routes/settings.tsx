@@ -73,12 +73,18 @@ export default function Settings(props: ScreenProps) {
         <Divider theme={props.theme} margin="16px 0"/>
 
         <div className="flex flex-row w-full justify-between text-center">
+          <Button theme={props.theme}><Link to="/credits"><p>Credits</p></Link></Button>
+        </div>
+
+        <Divider theme={props.theme} margin="16px 0"/>
+
+        <div className="flex flex-row w-full justify-between text-center">
           <Button theme={props.theme}><Link to="/"><p>Back</p></Link></Button>
         </div>
 
         <div style={{marginTop: 16}}/>
 
-        <p className="text-sm" style={props.theme.secondarytext}>Created by <a target="_blank" rel="noopener noreferrer" href="https://gabebanks.net">Gabe Banks</a> 2022</p>
+        <p className="text-sm" style={props.theme.secondarytext}>Created by <a target="_blank" rel="noopener noreferrer" href="https://gabebanks.net" className="underline">Gabe Banks</a> 2022</p> 
 
       </div>
     </div>
