@@ -1,12 +1,9 @@
-import { Link, useNavigate } from "react-router-dom";
-import { getTheme, ScreenProps, ThemeStrInterface } from "../api/globals";
-import { deleteCalendarData, deleteSettingsData, saveSettingsData } from "../api/cacheFile";
+import { Link } from "react-router-dom";
+import { ScreenProps } from "../api/globals";
 import Button from "../components/Button";
 import Divider from "../components/Divider";
 
 export default function Credits(props: ScreenProps) {
-
-  const navigate = useNavigate()
 
   return (
     <div className="h-screen text-left" style={props.theme.body}>
