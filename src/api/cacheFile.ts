@@ -159,6 +159,17 @@ async function getCalendarICS() {
   return calendar;
 }
 
+export async function checkCalendarUpdate() {
+  let lastUpdate = localStorage.getItem('lastUpdate')
+  if (!lastUpdate) {
+    lastUpdate = "0"
+  }
+  if (new Date().getTime() - parseInt(lastUpdate) > 2592000000) {
+    deleteCalendarData()
+    localStorage.setItem("lastUpdate", new Date().getTime().toString())
+  }
+}
+
 // returns JSON data for calendar by reading it from the file, or creates the file from a raw, freshly downloaded ICS
 async function getCalendarData() {
   let rawData = localStorage.getItem('calendar')

@@ -6,7 +6,7 @@ import Calendar from "./routes/calendar";
 import Detail from "./routes/detail";
 import Settings from "./routes/settings";
 import { useEffect, useState } from "react";
-import { calendarItemInterface, getFileData, SettingsInterface } from "./api/cacheFile";
+import { calendarItemInterface, checkCalendarUpdate, getFileData, SettingsInterface } from "./api/cacheFile";
 import Loading from "./components/Loading";
 import { getTheme } from "./api/globals";
 import getCurrentTimeData, { TimeDataInterface } from "./api/CalculateTime";
@@ -29,6 +29,7 @@ export default function Root() {
     const [timeData, setTimeData] = useState(emptyTimeData)
     
     const refreshApp = () => {
+        checkCalendarUpdate()
         setCalendar([])
         getFileData().then(x => {
             console.log("loading data...")
