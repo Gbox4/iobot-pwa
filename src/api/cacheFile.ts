@@ -164,9 +164,11 @@ export async function checkCalendarUpdate() {
   if (!lastUpdate) {
     lastUpdate = "0"
   }
-  if (new Date().getTime() - parseInt(lastUpdate) > 2592000000) {
+  if (new Date().getTime() - parseInt(lastUpdate) > 1000 * 60 * 60 * 24 * 7) {
+    // if (new Date().getTime() - parseInt(lastUpdate) > 2592000000) {
     deleteCalendarData()
     localStorage.setItem("lastUpdate", new Date().getTime().toString())
+    window.location.href = window.location.href;
   }
 }
 
