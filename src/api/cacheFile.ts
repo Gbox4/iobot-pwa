@@ -1,6 +1,6 @@
 import { ThemeStrInterface } from "./globals";
 
-const calendarUrl = "https://fast-bayou-92107.herokuapp.com/https://calendar.google.com/calendar/ical/iolani.org_ds7482aj4fh4uortauf8vuquso%40group.calendar.google.com/public/basic.ics"
+const calendarUrl = "https://cors.gabebanks.net/https://calendar.google.com/calendar/ical/iolani.org_ds7482aj4fh4uortauf8vuquso%40group.calendar.google.com/public/basic.ics"
 
 export interface scheduleItemInterface {
   timeStart: Date;
